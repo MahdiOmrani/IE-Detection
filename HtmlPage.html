@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!--<script src="http://shomanews.com/Scripts/jquery-1.4.2.min.js"></script>-->
+    <script>
+        var nAgt = navigator.userAgent;
+        var fullVersion = '' + parseFloat(navigator.appVersion);
+        var verOffset, version;
+
+        //INTERNET EXPLORER DETECTION
+
+        if ((verOffset = nAgt.indexOf("MSIE")) != -1) {
+            fullVersion = nAgt.substring(verOffset + 5);
+            version = fullVersion.substr(0, 1);
+        }
+
+        //if (version == 7 || version == 8) {
+        //    $('.menu').addClass('menuie');
+        //    $('.menu').removeClass('menu');
+        //}
+
+        if (version == 7 || version == 8) {
+            alert(version);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
